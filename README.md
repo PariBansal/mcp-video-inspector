@@ -28,6 +28,8 @@ This project is designed to understand how modern edited videos are structured �
 
 ## 🏗️ System Architecture
 
+![MCP Architecture](assets/architecture.png)
+
 User Input (YouTube URL)
 ↓
 Video Download
