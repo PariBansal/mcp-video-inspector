@@ -1,0 +1,39 @@
+<svg width='800' height='600' xmlns='http://www.w3.org/2000/svg'>
+<style>text { font-family: Arial; font-size: 16px; }</style>
+<rect width='100%' height='100%' fill='#f5f5f5'/>
+<text x='10' y='30' font-size='20' fill='#4b2e83'>🎬 MCP Video Summary</text>
+<text x='10' y='40' fill='#333'>🎨 Color & Visual Style:</text>
+<text x='20' y='60' fill='#555'>• #384563</text>
+<text x='20' y='80' fill='#555'>• #050405</text>
+<text x='20' y='100' fill='#555'>• #8f8288</text>
+<text x='20' y='120' fill='#555'>• #86523c</text>
+<text x='20' y='140' fill='#555'>• #c4a7a8</text>
+<text x='10' y='160' fill='#333'>✨ Transitions & Effects:</text>
+<text x='20' y='180' fill='#555'>• Slow/Gradual Transitions</text>
+<text x='20' y='200' fill='#555'>• Detected Transitions: 49</text>
+<text x='20' y='220' fill='#555'>• Frames Analyzed: 1066</text>
+<text x='20' y='240' fill='#555'>• Named Effects Detected: ['Luma Fade / Wipe', 'Cross Dissolve / Simple Cut']</text>
+<text x='10' y='260' fill='#333'>🎥 Camera Work:</text>
+<text x='20' y='280' fill='#555'>• High Motion (e.g., handheld, action shots)</text>
+<text x='20' y='300' fill='#555'>• Avg Motion Intensity: 4.75</text>
+<text x='20' y='320' fill='#555'>• Frames Processed: 5326</text>
+<text x='10' y='340' fill='#333'>📝 Typography & Text:</text>
+<text x='20' y='360' fill='#555'>• - RT, ia</text>
+<text x='20' y='380' fill='#555'>• NK ate</text>
+<text x='20' y='400' fill='#555'>• 7? Si</text>
+<text x='20' y='420' fill='#555'>• pxozexexen=</text>
+<text x='20' y='440' fill='#555'>• PO aa</text>
+<text x='10' y='460' fill='#333'>🤖 AI/Advanced Features:</text>
+<text x='20' y='480' fill='#555'>• Upscaled to 2K+</text>
+<text x='20' y='500' fill='#555'>• Soft focus or natural image</text>
+<text x='10' y='540' fill='#4b2e83'>🧠 Summary:</text>
+<text x='20' y='560' fill='#333'>What a fascinating project! Based on this analysis, I'd summarize the editing style, mood, and tone of the video as follows:</text>
+<text x='20' y='580' fill='#333'></text>
+<text x='20' y='600' fill='#333'>**Editing Style:** The video appears to have a bold, gritty aesthetic with a mix of high-energy transitions and effects. The use of slow/grandual transitions (49 detected) suggests a deliberate pacing, while the named effects ("Luma Fade / Wipe" and "Cross Dissolve / Simple Cut") imply a desire to create visual interest and flow. The editing style seems to prioritize energy and movement over subtlety.</text>
+<text x='20' y='620' fill='#333'></text>
+<text x='20' y='640' fill='#333'>**Mood:** The overall mood of the video is likely intense, energetic, and possibly even edgy. The use of dark blues (#384563) and deep greens (#050405) in the color palette suggests a dramatic or serious tone, while the inclusion of warm colors like #86523c and #c4a7a8 implies a sense of passion or urgency.</text>
+<text x='20' y='660' fill='#333'></text>
+<text x='20' y='680' fill='#333'>**Tone:** The tone of the video is likely to be bold, confident, and perhaps even provocative. The presence of "High Motion" camera work and "Upscaled to 2K+" suggests an emphasis on action and dynamism, while the use of AI/Advanced Features like soft focus or natural image implies a desire to create a sense of realism and authenticity.</text>
+<text x='20' y='700' fill='#333'></text>
+<text x='20' y='720' fill='#333'>**Additional Insights:** The inclusion of unusual typography and text elements (- RT, ia', 'NK ate', etc.) may suggest a playful or irreverent tone, which could add to the overall energy and momentum of the video.</text>
+</svg>

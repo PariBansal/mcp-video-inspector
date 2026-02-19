@@ -1,0 +1,41 @@
+
+🗂️  [ COLOR & VISUAL STYLE ]
+   • #384563
+   • #050405
+   • #8f8288
+   • #86523c
+   • #c4a7a8
+
+🗂️  [ TRANSITIONS & EFFECTS ]
+   • Slow/Gradual Transitions
+   • Detected Transitions: 49
+   • Frames Analyzed: 1066
+   • Named Effects Detected: ['Luma Fade / Wipe', 'Cross Dissolve / Simple Cut']
+
+🗂️  [ AUDIO DESIGN ]
+   • status: skipped
+   • note: Audio analysis intentionally disabled for this run.
+
+🗂️  [ TYPOGRAPHY & TEXT ]
+   • PO aa
+   • 7? Si
+   • - RT, ia
+   • NK ate
+   • pxozexexen=
+
+🗂️  [ CAMERA WORK ]
+   • High Motion (e.g., handheld, action shots)
+   • Avg Motion Intensity: 4.75
+   • Frames Processed: 5326
+
+🗂️  [ MOOD & TONE ]
+   • Mood: Dark/Moody
+   • Avg Brightness: 16.24
+
+🗂️  [ AI/ADVANCED FEATURES ]
+   • Upscaled to 2K+
+   • Soft focus or natural image
+
+🗂️  [ LLM SUMMARY ]
+   • 🧠 LLM Summary is disabled.
+📌 Use Cursor AI or manually review the extracted features above to interpret editing style, mood, and tone.

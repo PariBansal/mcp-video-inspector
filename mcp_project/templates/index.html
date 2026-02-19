@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MCP Video Inspector</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        color: #6a1b9a;
+      }
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background: #6a1b9a;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      button:hover {
+        background: #4a148c;
+      }
+      .section {
+        margin-top: 20px;
+      }
+      pre {
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        overflow-x: auto;
+      }
+      label {
+        display: block;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎞️ MCP Video Inspector</h1>
+
+    <textarea
+      id="urlInput"
+      placeholder="Paste YouTube video URL here..."
+    ></textarea>
+    <button onclick="analyze()">Analyze Video</button>
+    <button onclick="sendToFigma()">Send Selected to Figma</button>
+
+    <div id="results" class="section"></div>
+
+    <script>
+      let latestData = {};
+
+      async function analyze() {
+        const url = document.getElementById("urlInput").value.trim();
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = "⏳ Analyzing...";
+
+        const response = await fetch("/analyze", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url }),
+        });
+
+        const data = await response.json();
+        latestData = data;
+
+        if (data.error) {
+          resultsDiv.innerHTML = `<p style="color:red">❌ Error: ${data.error}</p>`;
+          return;
+        }
+
+        resultsDiv.innerHTML = `
+        <h2>📊 Results</h2>
+
+        <label><input type="checkbox" id="summaryBox" checked> 🎨 LLM Summary</label>
+        <div><strong>🎨 LLM Summary:</strong><br><pre>${
+          data["LLM Summary"]
+        }</pre></div>
+
+        <label><input type="checkbox" id="colorBox" checked> 🎨 Color & Visual Style</label>
+        <div><strong>🎨 Color & Visual Style:</strong> ${data[
+          "Color & Visual Style"
+        ].join(", ")}</div>
+
+        <label><input type="checkbox" id="transitionsBox" checked> ✨ Transitions & Effects</label>
+        <div><strong>✨ Transitions & Effects:</strong> ${data[
+          "Transitions & Effects"
+        ].join(", ")}</div>
+
+        <label><input type="checkbox" id="cameraBox" checked> 🎥 Camera Work</label>
+        <div><strong>🎥 Camera Work:</strong> ${data["Camera Work"].join(
+          ", "
+        )}</div>
+
+        <label><input type="checkbox" id="typographyBox" checked> 📝 Typography & Text</label>
+        <div><strong>📝 Typography & Text:</strong> ${data[
+          "Typography & Text"
+        ].join(", ")}</div>
+
+        <label><input type="checkbox" id="aiBox" checked> 🤖 AI/Advanced Features</label>
+        <div><strong>🤖 AI/Advanced Features:</strong> ${data[
+          "AI/Advanced Features"
+        ].join(", ")}</div>
+        `;
+      }
+
+      async function sendToFigma() {
+        const selectedFeatures = {};
+
+        if (document.getElementById("summaryBox").checked)
+          selectedFeatures["LLM Summary"] = latestData["LLM Summary"];
+        if (document.getElementById("colorBox").checked)
+          selectedFeatures["Color & Visual Style"] =
+            latestData["Color & Visual Style"];
+        if (document.getElementById("transitionsBox").checked)
+          selectedFeatures["Transitions & Effects"] =
+            latestData["Transitions & Effects"];
+        if (document.getElementById("cameraBox").checked)
+          selectedFeatures["Camera Work"] = latestData["Camera Work"];
+        if (document.getElementById("typographyBox").checked)
+          selectedFeatures["Typography & Text"] =
+            latestData["Typography & Text"];
+        if (document.getElementById("aiBox").checked)
+          selectedFeatures["AI/Advanced Features"] =
+            latestData["AI/Advanced Features"];
+
+        const response = await fetch("/selected-features", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ features: selectedFeatures }),
+        });
+
+        const html = await response.text();
+        const newTab = window.open();
+        newTab.document.write(html);
+      }
+    </script>
+  </body>
+</html>

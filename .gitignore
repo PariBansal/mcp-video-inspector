@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Downloaded videos
+downloads/
+uploads/
+
+# Executables
+*.exe
+
+# Text files (generated)
+cookies.txt
+illustrator_output.txt
+
+# System files
+Thumbs.db

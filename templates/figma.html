@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MCP x Figma Video Editor</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f5;
+        color: #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #6a1b9a;
+        margin-bottom: 10px;
+      }
+
+      iframe {
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 600px;
+        border-radius: 6px;
+        margin-top: 20px;
+      }
+
+      .features-box {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .features-box h3 {
+        margin-top: 0;
+        color: #4a148c;
+      }
+
+      .feature-item {
+        margin-bottom: 8px;
+      }
+
+      .note {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎨 Figma Video Template Editor</h1>
+
+    <!-- ✅ Live Figma Embed with Edit Access -->
+    <iframe
+      src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/file/uASQQPOkpAUmbYLhYLqvMq/Untitled?node-id=0-1&mode=design"
+      allowfullscreen
+    ></iframe>
+
+    <!-- ✅ Dynamically Injected Features -->
+    <div class="features-box">
+      <h3>Selected Features from Analysis</h3>
+      {% if selected_features %} {% for key, value in selected_features.items()
+      %}
+      <div class="feature-item"><strong>{{ key }}:</strong> {{ value }}</div>
+      {% endfor %} {% else %}
+      <div class="feature-item">
+        No features selected yet. Please analyze a video first.
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="note">
+      ✅ Edit the Figma template directly above<br />
+      📥 Click “Share” > “Duplicate” or “Export” to use the design
+    </div>
+  </body>
+</html>
