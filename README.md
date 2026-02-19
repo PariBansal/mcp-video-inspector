@@ -30,23 +30,6 @@ This project is designed to understand how modern edited videos are structured �
 
 ![MCP Architecture](assets/architecture.png)
 
-User Input (YouTube URL)
-↓
-Video Download
-↓
-Frame & Audio Extraction (FFmpeg)
-↓
-Feature Extraction Modules
-• Color & Visual Style
-• Transitions & Effects
-• Camera Work
-• Typography (OCR)
-• Audio Analysis
-↓
-LLM-Based Summary (Ollama / LLaMA)
-↓
-Export to SVG / Figma Template
-
 ---
 
 ## 🛠️ Tech Stack
