@@ -1,5 +1,11 @@
 # 🎬 MCP Video Inspector – Media Content Processor
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Flask](https://img.shields.io/badge/Flask-Backend-black.svg)
+![AI](https://img.shields.io/badge/AI-Powered-red.svg)
+![Computer Vision](https://img.shields.io/badge/Computer%20Vision-OpenCV-green.svg)
+![LLM](https://img.shields.io/badge/LLM-Ollama-purple.svg)
+
 An AI-powered system that analyzes YouTube videos and extracts professional video editing features using Computer Vision and LLM-based analysis.
 
 This project is designed to understand how modern edited videos are structured — including color grading, transitions, camera movement, typography, and audio mood — and generate intelligent summaries for creative reuse.
